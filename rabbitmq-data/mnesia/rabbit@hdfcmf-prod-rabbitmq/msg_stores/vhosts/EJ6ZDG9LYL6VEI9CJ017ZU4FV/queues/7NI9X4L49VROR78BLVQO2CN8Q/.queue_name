@@ -1,0 +1,2 @@
+VHOST: hdfcmf-prod-rabbitmq
+QUEUE: SEND_EMAIL_FOR_NIGO_TRANSACTION
