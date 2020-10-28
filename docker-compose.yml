@@ -7,8 +7,8 @@ volumes:
 services:
   rabbitmq:
     image: rabbitmq:3-management
-    hostname: hdfcmf-prod-rabbitmq
-    container_name: hdfcmf-prod-rabbitmq
+    hostname: siva-prod-rabbitmq
+    container_name: siva-prod-rabbitmq
     restart: always
     expose:
       - "9090"
@@ -37,7 +37,7 @@ services:
     networks:
       - "rabbitmq-prometheus"
     environment:
-      RABBIT_URL: "http://hdfcmf-prod-rabbitmq:15672"
+      RABBIT_URL: "http://siva-prod-rabbitmq:15672"
       RABBIT_USER: "hdfcprod42"
       RABBIT_PASSWORD: "J6Ew6BeY"
       PUBLISH_PORT: "9090"
@@ -79,6 +79,6 @@ services:
       # https://grafana.com/plugins/yesoreyeram-boomtable-panel
       GF_INSTALL_PLUGINS: "flant-statusmap-panel,grafana-piechart-panel"
       GF_SECURITY_ADMIN_USER: "admin"
-      GF_SECURITY_ADMIN_PASSWORD: "hdfc@321"
+      GF_SECURITY_ADMIN_PASSWORD: "siva@321"
     depends_on:
       - prometheus
