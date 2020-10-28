@@ -21,7 +21,7 @@ services:
     networks:
       - "rabbitmq-prometheus"
     environment:
-      RABBITMQ_DEFAULT_USER: hdfcprod42
+      RABBITMQ_DEFAULT_USER: sivaprod42
       RABBITMQ_DEFAULT_PASS: J6Ew6BeY
     volumes:
       - ./rabbitmq-isolated.conf:/etc/rabbitmq/rabbitmq.config
